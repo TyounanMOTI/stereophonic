@@ -12,7 +12,7 @@ namespace {
         static const value_type AZIMUTH_INTERVAL = 5;
         static const size_type NUM_DATA = 360 / AZIMUTH_INTERVAL;
 
-        AzimuthListGenerator_CIAIR() : azimuth_(-5) {}
+        AzimuthListGenerator_CIAIR() : azimuth_(-AZIMUTH_INTERVAL) {}
 
         value_type operator ()()
         {
