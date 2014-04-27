@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 
+#include <string>
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -19,4 +21,10 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
+};
+
+class HRTFLoader
+{
+public:
+    explicit HRTFLoader(const std::string& path);
 };
