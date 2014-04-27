@@ -41,11 +41,9 @@ namespace {
     }
 }
 
-HRTFLoader::HRTFLoader(const std::string& path)
+HRTFLoader::HRTFLoader(const std::string& path) : available_azimuth_(AzimuthListGenerator_CIAIR::NUM_DATA)
 {
-    std::vector<AzimuthListGenerator_CIAIR::value_type> available_azimuth(AzimuthListGenerator_CIAIR::NUM_DATA);
-    std::generate(available_azimuth.begin(), available_azimuth.end(), AzimuthListGenerator_CIAIR());
-    
+    std::generate(available_azimuth_.begin(), available_azimuth_.end(), AzimuthListGenerator_CIAIR());
 }
 
 //--------------------------------------------------------------

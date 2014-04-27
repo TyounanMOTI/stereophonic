@@ -3,6 +3,7 @@
 #include "ofMain.h"
 
 #include <string>
+#include <vector>
 
 class ofApp : public ofBaseApp{
 
@@ -27,4 +28,7 @@ class HRTFLoader
 {
 public:
     explicit HRTFLoader(const std::string& path);
+
+private:
+    std::vector<int> available_azimuth_;
 };
